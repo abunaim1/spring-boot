@@ -9,7 +9,10 @@ import com.hospitalManagement.hospitalManagement.service.PatientService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
+import java.awt.print.Pageable;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
@@ -58,13 +61,13 @@ public class PatientTest {
 //            System.out.println(p);
 //        }
 
-//        int rowsUpdate = patientRepository.updateNameWithId("Toru", 1L);
+//        int rowsUpdate = patientRepository.updateNameWithId("Toru", 1L)
 //        System.out.println(rowsUpdate);
 
-        List<BloodGroupCountResponseEntity> bloodGroupCount = patientRepository.countEachBloodGroupType();
-        for (BloodGroupCountResponseEntity bloodGroupCountResponse: bloodGroupCount){
-            System.out.println(bloodGroupCountResponse);
-        }
+//        List<BloodGroupCountResponseEntity> bloodGroupCount = patientRepository.countEachBloodGroupType();
+//        for (BloodGroupCountResponseEntity bloodGroupCountResponse: bloodGroupCount){
+//            System.out.println(bloodGroupCountResponse);
+//        }
 
     }
 }

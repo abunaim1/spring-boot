@@ -3,7 +3,7 @@ package com.hospitalManagement.hospitalManagement.repository;
 import com.hospitalManagement.hospitalManagement.dto.BloodGroupCountResponseEntity;
 import com.hospitalManagement.hospitalManagement.entity.Patient;
 import com.hospitalManagement.hospitalManagement.entity.type.BloodGroupType;
-import org.hibernate.sql.Update;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -11,6 +11,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.awt.print.Pageable;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -37,7 +38,6 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
 
     @Query(value = "select * from patient", nativeQuery = true)
     List<Patient> findAllPatient();
-
 
     @Transactional
     @Modifying
